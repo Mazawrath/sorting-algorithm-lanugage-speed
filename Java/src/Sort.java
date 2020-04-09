@@ -13,7 +13,7 @@ public class Sort {
         for (int i = 1; i <= 100; i++) {
             File file = new File(System.getProperty("user.dir") + "\\Test files\\Random\\f" + i + ".txt");
             BufferedReader br = new BufferedReader(new FileReader(file));
-            int[] nums = new int[6000];
+            int[] nums = new int[15000];
 
             // Read the input of the file
             int itt = 0;
@@ -44,7 +44,7 @@ public class Sort {
         // Best case
         File file = new File(System.getProperty("user.dir") + "\\Test files\\Best\\best.txt");
         BufferedReader br = new BufferedReader(new FileReader(file));
-        int[] nums = new int[50000];
+        int[] nums = new int[15000];
 
         // Read the input of the file
         int itt = 0;
@@ -74,7 +74,7 @@ public class Sort {
         // Worst case
         file = new File(System.getProperty("user.dir") + "\\Test files\\Worst\\worst.txt");
         br = new BufferedReader(new FileReader(file));
-        nums = new int[50000];
+        nums = new int[15000];
 
         // Read the input of the file
         itt = 0;
