@@ -3,7 +3,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-public class Main {
+public class Sort {
 
     public static void main(String[] args) throws IOException {
         // Array of 100 because there are 102 files to sort
@@ -13,7 +13,7 @@ public class Main {
         for (int i = 1; i <= 100; i++) {
             File file = new File(System.getProperty("user.dir") + "\\Test files\\Random\\f" + i + ".txt");
             BufferedReader br = new BufferedReader(new FileReader(file));
-            int[] nums = new int[50000];
+            int[] nums = new int[6000];
 
             // Read the input of the file
             int itt = 0;
