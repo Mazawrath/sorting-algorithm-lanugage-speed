@@ -18,17 +18,16 @@ public class Sort {
         }
 
         // Best case
-        File file = new File(System.getProperty("user.dir") + "\\Test files\\Best\\best.txt");
-        long timeElapsed = sortArray(file);
-
-        timings[timings.length - 2 - 1] = timeElapsed;
-        System.out.println("Time spent sorting best.txt: " + timeElapsed);
+        File bestFile = new File(System.getProperty("user.dir") + "\\Test files\\Best\\best.txt");
+        long bestTimeElapsed = sortArray(bestFile);
+        timings[timings.length - 2 - 1] = bestTimeElapsed;
+        System.out.println("Time spent sorting best.txt: " + bestTimeElapsed);
 
         // Worst case
-        file = new File(System.getProperty("user.dir") + "\\Test files\\Worst\\worst.txt");
-        timeElapsed = sortArray(file);
-        System.out.println("Time spent sorting worst.txt: " + timeElapsed);
-
+        File worstFile = new File(System.getProperty("user.dir") + "\\Test files\\Worst\\worst.txt");
+        long worstTimeElapsed = sortArray(worstFile);
+        timings[timings.length - 1 - 1] = worstTimeElapsed;
+        System.out.println("Time spent sorting worst.txt: " + worstTimeElapsed);
 
         // Write the results to a file
         DateFormat dateFormat = new SimpleDateFormat("MM-dd-yyyy HH-mm-ss");
