@@ -20,13 +20,13 @@ public class Sort {
         // Best case
         File bestFile = new File(System.getProperty("user.dir") + "\\Test files\\Best\\best.txt");
         long bestTimeElapsed = sortArray(bestFile);
-        timings[timings.length - 2 - 1] = bestTimeElapsed;
+        timings[100] = bestTimeElapsed;
         System.out.println("Time spent sorting best.txt: " + bestTimeElapsed);
 
         // Worst case
         File worstFile = new File(System.getProperty("user.dir") + "\\Test files\\Worst\\worst.txt");
         long worstTimeElapsed = sortArray(worstFile);
-        timings[timings.length - 1 - 1] = worstTimeElapsed;
+        timings[101] = worstTimeElapsed;
         System.out.println("Time spent sorting worst.txt: " + worstTimeElapsed);
 
         // Write the results to a file
