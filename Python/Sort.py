@@ -1,4 +1,5 @@
 import time
+from datetime import datetime
 
 timings = []
 
@@ -16,27 +17,23 @@ def sort_array(arr):
     return finish - start
 
 
+# Random case
 for i in range(1, 100):
     nums = []
 
     # Read the input in
     with open(f"..\\Test files\\Random\\f{i}.txt") as file:
         for line in file:
-            nums.append(file.readline().rstrip())
+            nums.append(int(line.rstrip()))
     file.close()
 
-    # Bubble sort
-    n = len(nums)
-
-    start = int(round(time.time() * 1000))
-    for k in range(n):
-        for j in range(0, n - k - 1):
-            if nums[j] > nums[j + 1]:
-                nums[j], nums[j + 1] = nums[j + 1], nums[j]
-    finish = int(round(time.time() * 1000))
-    timeElapsed = finish - start
+    # Sort the array
+    timeElapsed = sort_array(nums)
+    # Add timing to array of timings
     timings.append(timeElapsed)
-    print("Time spent sorting " + str(i) + ".txt: " + str(timeElapsed))
+    print("PYTHON: Time spent sorting f" + str(i) + ".txt: " + str(timeElapsed))
+
+
 # Best case
 nums = []
 
