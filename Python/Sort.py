@@ -2,6 +2,20 @@ import time
 
 timings = []
 
+
+def sort_array(arr):
+    # Bubble sort
+    n = len(arr)
+
+    start = int(round(time.time() * 1000))
+    for k in range(n):
+        for j in range(0, n - k - 1):
+            if arr[j] > arr[j + 1]:
+                arr[j], arr[j + 1] = arr[j + 1], arr[j]
+    finish = int(round(time.time() * 1000))
+    return finish - start
+
+
 for i in range(1, 100):
     nums = []
 
