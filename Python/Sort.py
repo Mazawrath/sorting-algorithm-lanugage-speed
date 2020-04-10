@@ -37,3 +37,15 @@ for i in range(1, 100):
     timeElapsed = finish - start
     timings.append(timeElapsed)
     print("Time spent sorting " + str(i) + ".txt: " + str(timeElapsed))
+# Returns a datetime object containing the local date and time
+current_date_time = datetime.now()
+# Create the file
+open(f"results\\{current_date_time.month}-{current_date_time.day}-{current_date_time.year} "
+     f"{current_date_time.hour}-{current_date_time.minute}-{current_date_time.second}.txt", "x")
+# Open the file and write to it
+results = open(f"results\\{current_date_time.month}-{current_date_time.day}-{current_date_time.year} "
+               f"{current_date_time.hour}-{current_date_time.minute}-{current_date_time.second}.txt", "w")
+
+for time in timings:
+    results.write(f"{time}\n")
+results.close()
