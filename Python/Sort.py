@@ -18,7 +18,7 @@ def sort_array(arr):
 
 
 # Random case
-for i in range(1, 100):
+for i in range(1, 101):
     nums = []
 
     # Read the input in
@@ -32,7 +32,6 @@ for i in range(1, 100):
     # Add timing to array of timings
     timings.append(timeElapsed)
     print("PYTHON: Time spent sorting f" + str(i) + ".txt: " + str(timeElapsed))
-
 
 # Best case
 nums = []
